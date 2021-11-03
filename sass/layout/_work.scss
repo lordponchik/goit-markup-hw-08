@@ -1,0 +1,26 @@
+.work--section {
+  padding-top: 0;
+}
+.work-menu {
+  @include flex-box;
+}
+.work-menu__item {
+  @include flex-item(3);
+}
+.work-menu__overlay {
+  position: relative;
+}
+.work-menu__text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-align: center;
+  text-transform: uppercase;
+  background: $work-bg-overlay;
+  color: $white-color;
+}

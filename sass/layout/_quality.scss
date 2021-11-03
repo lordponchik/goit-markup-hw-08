@@ -1,0 +1,24 @@
+.quality-menu {
+  @include flex-box;
+}
+.quality-menu__item {
+  @include flex-item;
+}
+
+.quality-menu__icon {
+  @extend %align;
+  justify-content: center;
+  background-color: $secondary-bg-color;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+.quality-menu__title {
+  margin-bottom: 10px;
+
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+}

@@ -1,0 +1,35 @@
+.clients__title {
+  margin-bottom: 50px;
+}
+.clients-menu {
+  @include flex-box;
+}
+.clients-menu__item {
+  @include flex-item(6);
+  height: 92px;
+}
+
+.clients-menu__link {
+  @extend %align;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+
+  transition: border-color $transition-duration $transition-timing-function;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.clients-menu__icon {
+  fill: $icon-color;
+
+  transition: fill $transition-duration $transition-timing-function;
+  .clients-menu__link:hover &,
+  .clients-menu__link:focus & {
+    fill: $accent-color;
+  }
+}

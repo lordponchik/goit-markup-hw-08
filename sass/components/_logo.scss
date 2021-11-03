@@ -1,0 +1,10 @@
+.logo {
+  margin-right: 93px;
+
+  font-family: Raleway;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  color: $accent-color;
+  transition: color $transition-duration $transition-timing-function;
+}

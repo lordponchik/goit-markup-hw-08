@@ -1,0 +1,61 @@
+.backdrop.is-hidden .modal {
+  opacity: 0;
+
+  transform: translate(-50%, -50%) scale(0.1);
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+
+  background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  opacity: 1;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform $transition-duration $transition-timing-function,
+    opacity $transition-duration $transition-timing-function;
+}
+
+.modal__button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-style: none;
+  border: 1px solid $modal-btn-border-color;
+  background-color: $white-color;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: background-color $transition-duration $transition-timing-function;
+}
+
+.modal__icon {
+  transition: fill $transition-duration $transition-timing-function;
+
+  .modal__button:hover &,
+  .modal__button:focus & {
+    fill: $accent-color;
+  }
+}
+.modal__title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: $secondary-text-color;
+  margin-bottom: 12px;
+  text-align: center;
+}

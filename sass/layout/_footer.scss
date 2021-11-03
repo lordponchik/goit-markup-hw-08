@@ -1,0 +1,116 @@
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  background-color: $primary-bg-color;
+}
+.footer__container {
+  display: flex;
+  align-items: baseline;
+}
+.footer__item:first-child {
+  margin-right: 70px;
+}
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+  &:hover,
+  &:focus {
+    color: $white-color;
+  }
+}
+.footer__logo--white {
+  font-family: 'Roboto', sans-serif;
+  color: $white-color;
+}
+
+.address__text {
+  margin-bottom: 9px;
+
+  font-style: normal;
+  color: $white-color;
+}
+.address__contacts {
+  flex-direction: column;
+}
+.address__contacts > .address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.address__link {
+  font-style: normal;
+  color: $white-transparent-color;
+
+  transition: color $transition-duration $transition-timing-function;
+}
+.address__link:hover,
+.address__link:focus {
+  color: $accent-color;
+}
+
+.footer__title {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $white-color;
+}
+.footer__link {
+  background-color: $icon-join-bg-color;
+  transition: background-color $transition-duration $transition-timing-function;
+}
+.footer__icon {
+  fill: $white-color;
+
+  transition: fill $transition-duration $transition-timing-function;
+}
+.footer__item:last-child {
+  margin-left: auto;
+}
+
+.mailing__title {
+  display: inline-block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $white-color;
+}
+.mailing-form {
+  display: flex;
+}
+.mailing-form__input {
+  min-width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+  border: 1px solid $mailing-border-color;
+  margin-right: 12px;
+  box-sizing: border-box;
+
+  border-radius: 4px;
+  background-color: transparent;
+  color: $white-color;
+
+  transition: border $transition-duration $transition-timing-function;
+  &:hover,
+  &:focus {
+    outline: none;
+    border-color: $accent-color;
+  }
+}
+.mailing-form__btn {
+  @include btn-padding(10px, 28px);
+}
+.mailing-form__icon {
+  fill: $white-color;
+
+  transition: fill $transition-duration $transition-timing-function;
+  .mailing-form__btn:hover &,
+  .mailing-form__btn:focus & {
+    fill: $accent-color;
+  }
+}
