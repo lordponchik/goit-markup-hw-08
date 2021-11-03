@@ -9,7 +9,8 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  // max-width: 100%;
+  width: 100%;
   height: auto;
 }
 .link {
@@ -18,4 +19,11 @@ img {
 
 .list {
   list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
 }

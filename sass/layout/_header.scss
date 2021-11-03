@@ -7,7 +7,9 @@
 .nav {
   @extend %align;
 }
-
+.header__logo {
+  margin-right: 93px;
+}
 .header__logo--black {
   color: $black-color;
   font-family: 'Roboto', sans-serif;

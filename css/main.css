@@ -21,7 +21,7 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -33,11 +33,6 @@ img {
   list-style: none;
 }
 
-.clients-menu__link, .quality-menu__icon, .contacts__link, .nav__site, .nav, .header__container, .social__link, .btn-page {
-  display: flex;
-  align-items: center;
-}
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -46,8 +41,12 @@ img {
   margin: -1px;
 }
 
+.clients-menu__link, .quality-menu__icon, .contacts__link, .nav__site, .nav, .header__container, .social__link, .btn-page {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
-  margin-right: 93px;
   font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
@@ -211,6 +210,10 @@ img {
   border-bottom: 1px solid #ececec;
 }
 
+.header__logo {
+  margin-right: 93px;
+}
+
 .header__logo--black {
   color: #000000;
   font-family: "Roboto", sans-serif;
@@ -283,8 +286,10 @@ img {
   margin-right: 10px;
 }
 
-.overlay {
+.hero {
   max-width: 1600px;
+  padding-top: 200px;
+  padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-bg.jpg);
@@ -292,11 +297,6 @@ img {
   background-position: center;
   background-size: cover;
   background-color: #c4c4c4;
-}
-
-.hero {
-  padding-top: 200px;
-  padding-bottom: 200px;
   text-align: center;
 }
 .hero .btn-page {
@@ -343,7 +343,7 @@ img {
   color: #212121;
 }
 
-.work--section {
+.work {
   padding-top: 0;
 }
 
