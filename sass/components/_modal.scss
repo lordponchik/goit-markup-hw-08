@@ -7,8 +7,8 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 528px;
-  min-height: 581px;
+  width: 90%;
+  height: 609px;
   padding: 40px;
 
   background-color: $white-color;
@@ -20,6 +20,14 @@
   transform: translate(-50%, -50%) scale(1);
   transition: transform $transition-duration $transition-timing-function,
     opacity $transition-duration $transition-timing-function;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 
 .modal__button {

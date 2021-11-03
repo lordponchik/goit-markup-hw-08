@@ -1,12 +1,15 @@
-.clients__title {
-  margin-bottom: 50px;
-}
 .clients-menu {
   @include flex-box;
 }
 .clients-menu__item {
-  @include flex-item(6);
+  @include flex-item(2);
   height: 92px;
+  @media screen and (min-width: 768px) {
+    @include flex-item(3);
+  }
+  @media screen and (min-width: 1200px) {
+    @include flex-item(6);
+  }
 }
 
 .clients-menu__link {

@@ -110,9 +110,21 @@
   align-items: center;
 
   cursor: pointer;
+  font-size: 12px;
+  line-height: 1.17;
+
+  @media screen and (min-width: 480px) {
+    margin-right: 5px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.7;
+  }
 }
 .agreement__text {
-  margin-right: 5px;
+  @media screen and (min-width: 480px) {
+    margin-right: 5px;
+  }
 }
 
 .agreement__link {
