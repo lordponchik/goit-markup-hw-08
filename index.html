@@ -24,7 +24,7 @@
           <a href="" class="logo link header__logo"
             >Web<span class="header__logo--black">Studio</span></a
           >
-          <ul class="nav__site list">
+          <!-- <ul class="nav__site list">
             <li class="nav__item nav__item--active">
               <a href="" class="nav__link nav__link--active link">Студия</a>
             </li>
@@ -32,9 +32,9 @@
               <a href="./portfolio.html" class="nav__link link">Портфолио</a>
             </li>
             <li class="nav__item"><a href="" class="nav__link link">Контакты</a></li>
-          </ul>
+          </ul> -->
         </nav>
-        <ul class="contacts list">
+        <!-- <ul class="contacts list">
           <li class="contacts__item">
             <a href="mailto:info@devstudio.com" class="contacts__link link">
               <svg class="contacts__icon" width="16" height="12">
@@ -51,7 +51,26 @@
               +38 096 111 11 11
             </a>
           </li>
-        </ul>
+        </ul> -->
+        <button
+          type="button"
+          class="btn-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <svg
+            class="btn-menu__icons"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use href="./images/icon.svg#icon-menu" class="btn-menu__icon-menu"></use>
+            <use href="./images/icon.svg#icon-close" class="btn-menu__icon-close"></use>
+          </svg>
+        </button>
+
+        <div class="menu-container" data-menu>меню</div>
       </div>
     </header>
     <main>
@@ -518,6 +537,7 @@
         </form>
       </div>
     </div>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

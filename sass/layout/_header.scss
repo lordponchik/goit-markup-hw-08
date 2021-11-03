@@ -1,8 +1,9 @@
 .header {
+  position: relative;
   border-bottom: 1px solid $primary-border-color;
 }
 .header__container {
-  // @extend %align;
+  @extend %align;
 }
 .nav {
   // @extend %align;
@@ -20,7 +21,45 @@
     color: $accent-color;
   }
 }
+.btn-menu {
+  margin-left: auto;
+  z-index: 1;
+  display: inline-flex;
+  border-style: none;
+  padding: 0;
+  cursor: pointer;
 
+  background-color: transparent;
+}
+
+.btn-menu__icons {
+  .btn-menu:hover & {
+    fill: $accent-color;
+  }
+}
+.btn-menu__icon-close {
+  display: none;
+}
+.btn-menu.is-open .btn-menu__icon-close {
+  display: block;
+}
+.btn-menu.is-open .btn-menu__icon-menu {
+  display: none;
+}
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  z-index: 0;
+  background-color: #fff;
+
+  &.is-open {
+    display: block;
+  }
+}
 .nav__site {
   @extend %align;
 }
