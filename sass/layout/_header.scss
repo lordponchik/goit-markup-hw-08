@@ -1,9 +1,10 @@
 .header {
+  position: relative;
   border-bottom: 1px solid $primary-border-color;
 }
-.header__container {
-  position: relative;
-}
+// .header__container {
+//   position: relative;
+// }
 .nav {
   @extend %align;
 }
@@ -29,7 +30,7 @@
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: auto;
-  z-index: 1;
+  z-index: 3;
   display: inline-flex;
   border-style: none;
   padding: 0;
@@ -57,18 +58,27 @@
 }
 .menu-container {
   @media screen and (max-width: 767px) {
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: auto;
     padding: 48px 40px;
-    z-index: 0;
+    z-index: 2;
     background-color: #fff;
+    transform: translateY(-100%);
+
+    transition: opacity $transition-duration $transition-timing-function,
+      transform $transition-duration $transition-timing-function;
 
     &.is-open {
-      display: block;
+      visibility: visible;
+      opacity: 1;
+      pointer-events: visible;
+      transform: translateY(0);
     }
   }
   @media screen and (min-width: 768px) {
@@ -93,7 +103,27 @@
     &:not(:last-child) {
       margin-bottom: 32px;
     }
+    .menu-container.is-open & {
+      transform: translateX(-100%);
+      animation: slideRight 250ms forwards;
+      animation-delay: 350ms;
+      &:nth-child(2) {
+        animation-delay: 450ms;
+      }
+      &:last-child {
+        animation-delay: 550ms;
+      }
+    }
   }
+  @keyframes slideRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
   &:not(last-child) {
     @media screen and (min-width: 768px) {
       margin-right: 50px;

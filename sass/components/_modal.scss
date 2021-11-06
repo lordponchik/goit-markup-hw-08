@@ -13,8 +13,7 @@
   opacity: 1;
   transform: scale(1);
   transition: transform $transition-duration $transition-timing-function,
-    opacity $transition-duration $transition-timing-function,
-    scale $transition-duration $transition-timing-function;
+    opacity $transition-duration $transition-timing-function;
 
   @media screen and (min-width: 768px) {
     position: absolute;
