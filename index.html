@@ -73,16 +73,40 @@
 
             <ul class="social-network list">
               <li class="social-network__list">
-                <a href="" class="social-network__link link" target="_blank" rel="noreferrer noopener">Instagram</a>
+                <a
+                  href=""
+                  class="social-network__link link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Instagram</a
+                >
               </li>
               <li class="social-network__list">
-                <a href="" class="social-network__link link" target="_blank" rel="noreferrer noopener">Twitter</a>
+                <a
+                  href=""
+                  class="social-network__link link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Twitter</a
+                >
               </li>
               <li class="social-network__list">
-                <a href="" class="social-network__link link" target="_blank" rel="noreferrer noopener">Facebook</a>
+                <a
+                  href=""
+                  class="social-network__link link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >Facebook</a
+                >
               </li>
               <li class="social-network__list">
-                <a href="" class="social-network__link link" target="_blank" rel="noreferrer noopener">LinkedIn</a>
+                <a
+                  href=""
+                  class="social-network__link link"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  >LinkedIn</a
+                >
               </li>
             </ul>
           </div>
@@ -157,7 +181,11 @@
             <li class="work-menu__item">
               <div class="work-menu__overlay">
                 <img
-                  src="./images/work-computer.jpg"
+                  srcset="
+                    ./images/work/work-computer-370.jpg    1x,
+                    ./images/work/work-computer-370@2x.jpg 2x
+                  "
+                  src="./images/work/work-computer.jpg"
                   alt="Работа за компьютером"
                   width="370"
                   height="294"
@@ -168,7 +196,11 @@
             <li class="work-menu__item">
               <div class="work-menu__overlay">
                 <img
-                  src="./images/work-phone.jpg"
+                  srcset="
+                    ./images/work/work-phone-370.jpg    1x,
+                    ./images/work/work-phone-370@2x.jpg 2x
+                  "
+                  src="./images/work/work-phone.jpg"
                   alt="Работа в телефоне"
                   width="370"
                   height="294"
@@ -179,7 +211,11 @@
             <li class="work-menu__item">
               <div class="work-menu__overlay">
                 <img
-                  src="./images/work-tablet.jpg"
+                  srcset="
+                    ./images/work/work-tablet-370.jpg    1x,
+                    ./images/work/work-tablet-370@2x.jpg 2x
+                  "
+                  src="./images/work/work-tablet.jpg"
                   alt="Работа на планшете"
                   width="370"
                   height="294"
@@ -195,12 +231,33 @@
           <h2 class="title">Наша команда</h2>
           <ul class="teammates list">
             <li class="teammates__item">
-              <img
-                src="./images/igor-demyanenko.jpg"
-                alt="Игорь Демьяненко"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/igor-demyanenko.jpg    1x,
+                    ./images/team/desktop/igor-demyanenko@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab/igor-demyanenko-tab.jpg    1x,
+                    ./images/team/tab/igor-demyanenko-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="
+                    ./images/team/mob/igor-demyanenko-mob.jpg    1x,
+                    ./images/team/mob/igor-demyanenko-mob@2x.jpg 2x
+                  "
+                  src="./images/team/mob/igor-demyanenko-mob.jpg"
+                  alt="Игорь Демьяненко"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="teammates__meta">
                 <h3 class="teammates__title">Игорь Демьяненко</h3>
                 <p lang="en" class="teammates__text">Product Designer</p>
@@ -233,7 +290,34 @@
               </div>
             </li>
             <li class="teammates__item">
-              <img src="./images/olga-repina.jpg" alt="Ольга Репина" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/olga-repina.jpg    1x,
+                    ./images/team/desktop/olga-repina@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab/olga-repina-tab.jpg    1x,
+                    ./images/team/tab/olga-repina-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+
+                <img
+                  srcset="
+                    ./images/team/mob/olga-repina-mob.jpg    1x,
+                    ./images/team/mob/olga-repina-mob@2x.jpg 2x
+                  "
+                  src="./images/team/mob/olga-repina-mob.jpg"
+                  alt="Ольга Репина"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="teammates__meta">
                 <h3 class="teammates__title">Ольга Репина</h3>
                 <p lang="en" class="teammates__text">Frontend Developer</p>
@@ -266,12 +350,30 @@
               </div>
             </li>
             <li class="teammates__item">
-              <img
-                src="./images/nikolay-tarasov.jpg"
-                alt="Николай Тарасов"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/nikolay-tarasov.jpg    1x,
+                    ./images/team/desktop/nikolay-tarasov@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)" />
+                <source
+                  srcset="
+                    ./images/team/tab/nikolay-tarasov-tab.jpg    1x,
+                    ./images/team/tab/nikolay-tarasov-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)" />
+                <img
+                  srcset="
+                    ./images/team/mob/nikolay-tarasov-mob.jpg    1x,
+                    ./images/team/mob/nikolay-tarasov-mob@2x.jpg 2x
+                  "
+                  src="./images/team/mob/nikolay-tarasov-mob.jpg"
+                  alt="Николай Тарасов"
+                  width="450"
+                  height="460"
+              /></picture>
+
               <div class="teammates__meta">
                 <h3 class="teammates__title">Николай Тарасов</h3>
                 <p lang="en" class="teammates__text">Marketing</p>
@@ -304,12 +406,33 @@
               </div>
             </li>
             <li class="teammates__item">
-              <img
-                src="./images/mikhail-ermakov.jpg"
-                alt="Михаил Ермаков"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/desktop/mikhail-ermakov.jpg    1x,
+                    ./images/team/desktop/mikhail-ermakov@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab/mikhail-ermakov-tab.jpg    1x,
+                    ./images/team/tab/mikhail-ermakov-tab@2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <img
+                  srcset="
+                    ./images/team/mob/mikhail-ermakov-mob.jpg    1x,
+                    ./images/team/mob/mikhail-ermakov-mob@2x.jpg 2x
+                  "
+                  src="./images/team/mob/mikhail-ermakov-mob.jpg"
+                  alt="Михаил Ермаков"
+                  width="450"
+                  height="460"
+                />
+              </picture>
+
               <div class="teammates__meta">
                 <h3 class="teammates__title">Михаил Ермаков</h3>
                 <p lang="en" class="teammates__text">UI Designer</p>
