@@ -296,7 +296,16 @@ img {
   }
 }
 
-.btn-menu:hover .btn-menu__icons {
+.btn-menu__icons {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-menu:hover .btn-menu__icons, .btn-menu:focus .btn-menu__icons {
+  fill: #2196f3;
+}
+.btn-menu.is-open .btn-menu__icons {
+  fill: #000000;
+}
+.btn-menu.is-open:hover .btn-menu__icons, .btn-menu.is-open:focus .btn-menu__icons {
   fill: #2196f3;
 }
 

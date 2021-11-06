@@ -2,9 +2,7 @@
   position: relative;
   border-bottom: 1px solid $primary-border-color;
 }
-// .header__container {
-//   position: relative;
-// }
+
 .nav {
   @extend %align;
 }
@@ -41,15 +39,26 @@
     display: none;
   }
 }
-
 .btn-menu__icons {
-  .btn-menu:hover & {
+  transition: fill $transition-duration $transition-timing-function;
+
+  .btn-menu:hover &,
+  .btn-menu:focus & {
+    fill: $accent-color;
+  }
+  .btn-menu.is-open & {
+    fill: $black-color;
+  }
+  .btn-menu.is-open:hover &,
+  .btn-menu.is-open:focus & {
     fill: $accent-color;
   }
 }
+
 .btn-menu__icon-close {
   display: none;
 }
+
 .btn-menu.is-open .btn-menu__icon-close {
   display: block;
 }
