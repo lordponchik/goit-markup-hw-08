@@ -20,7 +20,21 @@ function selectionCategory(e) {
     elem.classList.add('filter__button--active');
     btnFilter.classList.remove('filter__button--active');
     btnFilter = elem;
+
+    if (btnFilter.textContent === 'Все') {
+      projectsEl.innerHTML = '';
+      projectsEl.insertAdjacentHTML('beforeend', renderProjects(projects));
+    } else {
+      projectsEl.innerHTML = '';
+      projectsEl.insertAdjacentHTML('beforeend', renderProjects(renderCategory(projects)));
+    }
   }
+}
+
+function renderCategory(projects) {
+  return projects.filter(({ dataname }) => {
+    return dataname === btnFilter.getAttribute('data-name');
+  });
 }
 
 function renderProjects(projects) {
