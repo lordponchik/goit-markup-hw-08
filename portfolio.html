@@ -119,19 +119,21 @@
           <h1 class="visually-hidden">Наши работы</h1>
           <ul class="filter list portfolio__filter">
             <li class="filter__item">
-              <button type="button" class="filter__button filter__button--active">Все</button>
+              <button type="button" class="filter__button" data-name="all">Все</button>
             </li>
             <li class="filter__item">
-              <button type="button" class="filter__button">Веб-сайты</button>
+              <button type="button" class="filter__button" data-name="web-sites">Веб-сайты</button>
             </li>
             <li class="filter__item">
-              <button type="button" class="filter__button">Приложения</button>
+              <button type="button" class="filter__button" data-name="applications">
+                Приложения
+              </button>
             </li>
             <li class="filter__item">
-              <button type="button" class="filter__button">Дизайн</button>
+              <button type="button" class="filter__button" data-name="design">Дизайн</button>
             </li>
             <li class="filter__item">
-              <button type="button" class="filter__button">Маркетинг</button>
+              <button type="button" class="filter__button" data-name="marketing">Маркетинг</button>
             </li>
           </ul>
           <ul class="projects list"></ul>
@@ -223,6 +225,7 @@
       </div>
     </footer>
     <script src="./js/mobile-menu.js" type="module"></script>
+    <script src="./js/filter-projects.js" type="module"></script>
     <script src="./js/render-projects.js" type="module"></script>
   </body>
 </html>

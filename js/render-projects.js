@@ -1,12 +1,31 @@
 import projects from './projects.json' assert { type: 'json' };
 const projectsEl = document.querySelector('.projects');
+const filterEl = document.querySelector('.filter');
+
+let btnFilter = filterEl.querySelector('button[data-name="all"]');
+btnFilter.classList.add('filter__button--active');
 
 projectsEl.insertAdjacentHTML('beforeend', renderProjects(projects));
+
+filterEl.addEventListener('click', selectionCategory);
+
+function selectionCategory(e) {
+  const elem = e.target;
+
+  if (elem.nodeName != 'BUTTON') {
+    return;
+  }
+
+  if (btnFilter.getAttribute('data-name') !== elem.getAttribute('data-name')) {
+    elem.classList.add('filter__button--active');
+    btnFilter.classList.remove('filter__button--active');
+    btnFilter = elem;
+  }
+}
 
 function renderProjects(projects) {
   return projects
     .map(({ name, alt, overlaytext, title, category }) => {
-      console.log(name);
       return `<li class="projects__item">
               <a href="" class="projects__link link">
                 <div class="projects__overlay">
