@@ -71,6 +71,15 @@
   &:not(:last-child) {
     margin-bottom: 30px;
   }
+  &:nth-child(3n) {
+    animation: portfolioCardsInit 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  &:nth-child(2n) {
+    animation: portfolioCardsInit 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  @media screen and (max-width: 767px) {
+    animation: portfolioCardsInit 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
 }
 .projects__link {
   display: block;
@@ -153,5 +162,16 @@
   }
   @media screen and (min-width: 1200px) {
     padding: 63px 24px;
+  }
+}
+
+@keyframes portfolioCardsInit {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
