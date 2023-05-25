@@ -1052,9 +1052,6 @@ img {
     margin-left: 30px;
   }
 }
-.projects__item:not(:last-child) {
-  margin-bottom: 30px;
-}
 .projects__item:nth-child(3n) {
   animation: portfolioCardsInit 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
 }
@@ -1064,6 +1061,11 @@ img {
 @media screen and (max-width: 767px) {
   .projects__item {
     animation: portfolioCardsInit 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 

@@ -68,9 +68,7 @@
   @media screen and (min-width: 1200px) {
     @include flex-item(3);
   }
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
+
   &:nth-child(3n) {
     animation: portfolioCardsInit 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
   }
@@ -79,6 +77,11 @@
   }
   @media screen and (max-width: 767px) {
     animation: portfolioCardsInit 0.5s cubic-bezier(0.39, 0.575, 0.565, 1);
+  }
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 .projects__link {
