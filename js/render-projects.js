@@ -1,11 +1,11 @@
-import projects from './projects.json' assert { type: 'json' };
+import { projectsAPI } from './projects.js';
 const projectsEl = document.querySelector('.projects');
 const filterEl = document.querySelector('.filter');
 
 let btnFilter = filterEl.querySelector('button[data-name="all"]');
 btnFilter.classList.add('filter__button--active');
 
-projectsEl.insertAdjacentHTML('beforeend', renderProjects(projects));
+projectsEl.insertAdjacentHTML('beforeend', renderProjects(projectsAPI));
 
 filterEl.addEventListener('click', selectionCategory);
 
@@ -23,10 +23,10 @@ function selectionCategory(e) {
 
     if (btnFilter.textContent === 'Все') {
       projectsEl.innerHTML = '';
-      projectsEl.insertAdjacentHTML('beforeend', renderProjects(projects));
+      projectsEl.insertAdjacentHTML('beforeend', renderProjects(projectsAPI));
     } else {
       projectsEl.innerHTML = '';
-      projectsEl.insertAdjacentHTML('beforeend', renderProjects(renderCategory(projects)));
+      projectsEl.insertAdjacentHTML('beforeend', renderProjects(renderCategory(projectsAPI)));
     }
   }
 }
