@@ -14,7 +14,8 @@ export default class modal {
     this.modal.insertAdjacentHTML("beforeend", this.data);
   }
   openAddEvent() {
-    this.openModalBtn.addEventListener("click", () => {
+    this.openModalBtn.addEventListener("click", (e) => {
+      e.preventDefault();
       this.render();
       this.toggleModal();
       this.closeAddEvent();
