@@ -1,16 +1,12 @@
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector("[data-modal-open]"),
-    closeModalBtn: document.querySelector("[data-modal-close]"),
-    backdrop: document.querySelector("[data-backdrop]"),
-    modal: document.querySelector("[data-modal]"),
-  };
+export function renderOrder() {
+  return `
+    <button type="button" class="modal__button" data-modal-close>
+          <svg class="modal__icon" width="18" height="18">
+            <use href="./images/sprite.svg#icon-close-black"></use>
+          </svg>
+        </button>
 
-  refs.openModalBtn.addEventListener("click", toggleModal);
-  refs.closeModalBtn.addEventListener("click", toggleModal);
-
-  function renderOrder() {
-    return `<p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
+    <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="modal-form">
           <div class="modal-group modal-form__group">
             <label class="modal-group__field">
@@ -78,11 +74,4 @@
 
           <button type="submit" class="btn-page modal-form__btn">Отправить</button>
         </form>`;
-  }
-
-  function toggleModal() {
-    document.body.classList.toggle("modal-open");
-    refs.backdrop.classList.toggle("is-hidden");
-    refs.modal.insertAdjacentHTML("afterbegin", renderOrder());
-  }
-})();
+}
