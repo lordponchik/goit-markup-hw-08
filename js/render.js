@@ -38,6 +38,9 @@ subscribeButton.addEventListener("click", (e) => {
   subInputEl.style.borderColor = "";
   emailUser = subInputEl.value;
   subInputEl.value = "";
+
+  e.currentTarget.classList.remove("mailing-form__btn--resolved");
+  e.currentTarget.setAttribute("disabled", "disabled");
 });
 
 modalSubscribe.openAddEvent();
