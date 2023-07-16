@@ -12,7 +12,7 @@ export function renderOrder() {
             <label class="modal-group__field">
               <span class="modal-group__label">Имя</span>
               <span class="modal-group__overlay">
-                <input type="text" class="modal-group__input" name="user-name" placeholder=" " />
+                <input type="text" class="modal-group__input" data-user-name name="user-name" placeholder=" " />
                 <svg class="modal-group__icon">
                   <use href="./images/icon.svg#icon-person"></use>
                 </svg>
@@ -24,7 +24,7 @@ export function renderOrder() {
             <label class="modal-group__field">
               <span class="modal-group__label">Телефон</span>
               <span class="modal-group__overlay">
-                <input type="tel" class="modal-group__input" name="user-phone" placeholder=" " />
+                <input type="tel" class="modal-group__input" data-user-phone name="user-phone" placeholder=" " />
                 <svg class="modal-group__icon">
                   <use href="./images/icon.svg#icon-phone"></use>
                 </svg>
@@ -36,7 +36,7 @@ export function renderOrder() {
             <label class="modal-group__field">
               <span class="modal-group__label">Почта</span>
               <span class="modal-group__overlay">
-                <input type="email" class="modal-group__input" name="user-email" placeholder=" " />
+                <input type="email" class="modal-group__input" data-user-email name="user-email" placeholder=" " />
                 <svg class="modal-group__icon">
                   <use href="./images/icon.svg#icon-email"></use>
                 </svg>
@@ -50,6 +50,7 @@ export function renderOrder() {
               <textarea
                 name="user-comment"
                 placeholder="Введите текст"
+                data-user-comment
                 class="modal-group__input modal-group__input--comment"
               ></textarea>
             </label>
@@ -57,7 +58,7 @@ export function renderOrder() {
 
           <div class="modal-group agreement modal-form__group">
             <label class="agreement__field">
-              <input type="checkbox" name="agreement" class="agreement__checkbox" />
+              <input type="checkbox" name="agreement" data-user-agreement class="agreement__checkbox" />
               <span class="agreement__check">
                 <svg class="agreement__icon">
                   <use href="./images/icon.svg#icon-chek-mark"></use>
@@ -72,6 +73,6 @@ export function renderOrder() {
             </label>
           </div>
 
-          <button type="submit" class="btn-page modal-form__btn">Отправить</button>
+          <button type="submit" class="modal-form__btn" data-order-button>Отправить</button>
         </form>`;
 }
