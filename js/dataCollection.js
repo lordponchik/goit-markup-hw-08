@@ -16,6 +16,8 @@ orderOpenEl.addEventListener("click", (e) => {
   refsInput.userAgreement = document.querySelector("[data-user-agreement]");
 
   checkOrder();
+
+  refsInput.userName.addEventListener("input", userNameCheck);
   refsInput.userMail.addEventListener("input", userMailCheck);
 });
 
@@ -29,6 +31,13 @@ function checkOrder() {
   });
 }
 
+function userNameCheck(e) {
+  if (e.target.value.trim().length !== 0) {
+    e.target.style.borderColor = "green";
+  } else {
+    e.target.style.borderColor = "red";
+  }
+}
 function userMailCheck(e) {
   const EMAIL_REGEXP =
     /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
