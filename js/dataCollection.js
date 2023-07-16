@@ -19,6 +19,7 @@ orderOpenEl.addEventListener("click", (e) => {
 
   refsInput.userName.addEventListener("input", userNameCheck);
   refsInput.userMail.addEventListener("input", userMailCheck);
+  refsInput.userComment.addEventListener("input", userCommentCheck);
 });
 
 function checkOrder() {
@@ -33,6 +34,13 @@ function checkOrder() {
 
 function userNameCheck(e) {
   if (e.target.value.trim().length !== 0) {
+    e.target.style.borderColor = "green";
+  } else {
+    e.target.style.borderColor = "red";
+  }
+}
+function userCommentCheck(e) {
+  if (e.target.value.trim().length > 5) {
     e.target.style.borderColor = "green";
   } else {
     e.target.style.borderColor = "red";
