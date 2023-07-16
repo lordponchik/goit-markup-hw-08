@@ -8,11 +8,11 @@ export function renderOrder() {
 
     <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="modal-form">
-          <div class="modal-group modal-form__group">
+          <div class="modal-group modal-form__group" data-tooltip="Имя должно быть размером от одного символа">
             <label class="modal-group__field">
               <span class="modal-group__label">Имя</span>
               <span class="modal-group__overlay">
-                <input type="text" class="modal-group__input" data-user-name name="user-name" placeholder=" " />
+                <input type="text" class="modal-group__input"  data-user-name name="user-name" placeholder=" " />
                 <svg class="modal-group__icon">
                   <use href="./images/icon.svg#icon-person"></use>
                 </svg>
@@ -20,7 +20,7 @@ export function renderOrder() {
             </label>
           </div>
 
-          <div class="modal-group modal-form__group">
+          <div class="modal-group modal-form__group" data-tooltip="Формат номера телефона: +38(***)*******">
             <label class="modal-group__field">
               <span class="modal-group__label">Телефон</span>
               <span class="modal-group__overlay">
@@ -32,7 +32,7 @@ export function renderOrder() {
             </label>
           </div>
 
-          <div class="modal-group modal-form__group">
+          <div class="modal-group modal-form__group" data-tooltip="Формат номера телефона: XXXXXX@XX.XX">
             <label class="modal-group__field">
               <span class="modal-group__label">Почта</span>
               <span class="modal-group__overlay">
@@ -44,7 +44,7 @@ export function renderOrder() {
             </label>
           </div>
 
-          <div class="modal-group modal-form__group">
+          <div class="modal-group modal-form__group" data-tooltip="Комментарий должен быть не меньше 10 символов">
             <label class="modal-group__field">
               <span class="modal-group__label">Комментарий</span>
               <textarea

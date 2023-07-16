@@ -40,7 +40,7 @@ function userNameCheck(e) {
   }
 }
 function userPhoneCheck(e) {
-  const PHONE_REGEXP = /\+38\(\d{3}\)\d{3}-\d{2}-\d{2}$/iu;
+  const PHONE_REGEXP = /\+38\(\d{3}\)\d{3}\d{2}\d{2}$/iu;
 
   if (isEmailValid(e.target.value)) {
     e.target.style.borderColor = "green";

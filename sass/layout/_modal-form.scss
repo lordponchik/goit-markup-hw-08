@@ -149,6 +149,7 @@
 }
 
 .modal-form__btn {
+  position: relative;
   @extend %align;
   @include btn-padding(10px, 55px);
   margin-left: auto;
@@ -178,4 +179,26 @@
   //   color: $secondary-text-color;
   //   background-color: $secondary-bg-color;
   // }
+}
+
+[data-tooltip]::after {
+  position: absolute;
+  content: attr(data-tooltip); /* Выводим текст */
+  opacity: 1;
+  background-color: $accent-color;
+  color: $secondary-bg-color;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+  width: 400px;
+  height: 30px;
+  padding: 10px;
+
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+[data-tooltip]:hover::after,
+[data-tooltip]:focus-within::after {
+  opacity: 1;
 }
