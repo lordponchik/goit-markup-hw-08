@@ -18,6 +18,7 @@ orderOpenEl.addEventListener("click", (e) => {
   checkOrder();
 
   refsInput.userName.addEventListener("input", userNameCheck);
+  refsInput.userPhone.addEventListener("input", userPhoneCheck);
   refsInput.userMail.addEventListener("input", userMailCheck);
   refsInput.userComment.addEventListener("input", userCommentCheck);
 });
@@ -28,7 +29,6 @@ function checkOrder() {
 
   submitOrder.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("hier");
   });
 }
 
@@ -39,6 +39,19 @@ function userNameCheck(e) {
     e.target.style.borderColor = "red";
   }
 }
+function userPhoneCheck(e) {
+  const PHONE_REGEXP = /\+38\(\d{3}\)\d{3}-\d{2}-\d{2}$/iu;
+
+  if (isEmailValid(e.target.value)) {
+    e.target.style.borderColor = "green";
+  } else {
+    e.target.style.borderColor = "red";
+  }
+  function isEmailValid(value) {
+    return PHONE_REGEXP.test(value);
+  }
+}
+
 function userCommentCheck(e) {
   if (e.target.value.trim().length > 5) {
     e.target.style.borderColor = "green";
@@ -46,6 +59,7 @@ function userCommentCheck(e) {
     e.target.style.borderColor = "red";
   }
 }
+
 function userMailCheck(e) {
   const EMAIL_REGEXP =
     /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
