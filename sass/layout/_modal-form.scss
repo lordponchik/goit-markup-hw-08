@@ -163,8 +163,7 @@
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  // color: $white-color;
-  // background-color: $accent-color;
+
   color: $secondary-text-color;
   background-color: $secondary-bg-color;
 
@@ -173,26 +172,31 @@
 
   transition: color $transition-duration $transition-timing-function,
     background-color $transition-duration $transition-timing-function;
+}
+.modal-form__btn.modal-form__btn--resolved {
+  color: $white-color;
+  background-color: $accent-color;
 
-  // &:hover,
-  // &:focus {
-  //   color: $secondary-text-color;
-  //   background-color: $secondary-bg-color;
-  // }
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+    background-color: $secondary-bg-color;
+  }
 }
 
 [data-tooltip]::after {
+  content: attr(data-tooltip);
+
   position: absolute;
-  content: attr(data-tooltip); /* Выводим текст */
-  opacity: 1;
-  background-color: $accent-color;
-  color: $secondary-bg-color;
-  display: flex;
-  align-items: center;
-  border-radius: 2px;
   width: 400px;
   height: 30px;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+
+  background-color: $accent-color;
+  color: $secondary-bg-color;
 
   opacity: 0;
   transition: 1s;

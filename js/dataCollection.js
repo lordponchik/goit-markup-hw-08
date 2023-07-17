@@ -38,8 +38,10 @@ function checkOrderVisible() {
 
   if (isValidForm) {
     submitOrder.removeAttribute("disabled");
+    submitOrder.classList.add("modal-form__btn--resolved");
   } else {
     submitOrder.setAttribute("disabled", "disabled");
+    submitOrder.classList.remove("modal-form__btn--resolved");
   }
 }
 
