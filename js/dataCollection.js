@@ -1,3 +1,5 @@
+import modal from "./modal.js";
+
 const refsInput = {
   userName: null,
   userPhone: null,
@@ -47,10 +49,22 @@ function isFormCompleted() {
 
 function checkOrder() {
   const submitOrder = document.querySelector("[data-order-button]");
+  const order = new modal(submitOrder, renderMessage());
   submitOrder.setAttribute("disabled", "disabled");
-
   submitOrder.addEventListener("click", (e) => {
     e.preventDefault();
+    order.toggleModal();
+    order.modal.innerHTML = "";
+
+    setTimeout(() => {
+      order.render();
+      order.toggleModal();
+
+      setTimeout(() => {
+        order.toggleModal();
+        order.modal.innerHTML = "";
+      }, 1500);
+    }, 1000);
   });
 }
 
@@ -110,4 +124,9 @@ function isEmailValid(value) {
 function isPhoneValid(value) {
   const PHONE_REGEXP = /\+38\(\d{3}\)\d{3}\d{2}\d{2}$/iu;
   return PHONE_REGEXP.test(value);
+}
+function renderMessage() {
+  return `
+         <p class="modal__title">Мы свяжемся с вами в ближайшее время!</p>
+`;
 }
