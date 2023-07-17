@@ -26,7 +26,7 @@ orderOpenEl.addEventListener("click", (e) => {
   refsInput.userAgreement.addEventListener("change", userAgreementCheck);
 });
 
-function checkOrderVisible() {
+function isFormCompleted() {
   isValidForm =
     refsInput.userName.value.trim().length !== 0 &&
     isPhoneValid(refsInput.userPhone.value) &&
@@ -56,49 +56,49 @@ function checkOrder() {
 
 function userAgreementCheck(e) {
   if (e.target.checked) {
-    checkOrderVisible();
+    isFormCompleted();
   } else {
-    checkOrderVisible();
+    isFormCompleted();
   }
 }
 
 function userNameCheck(e) {
   if (e.target.value.trim().length !== 0) {
     e.target.style.borderColor = "green";
-    checkOrderVisible();
+    isFormCompleted();
   } else {
     e.target.style.borderColor = "red";
-    checkOrderVisible();
+    isFormCompleted();
   }
 }
 
 function userPhoneCheck(e) {
   if (isPhoneValid(e.target.value)) {
     e.target.style.borderColor = "green";
-    checkOrderVisible();
+    isFormCompleted();
   } else {
     e.target.style.borderColor = "red";
-    checkOrderVisible();
+    isFormCompleted();
   }
 }
 
 function userCommentCheck(e) {
   if (e.target.value.trim().length > 5) {
     e.target.style.borderColor = "green";
-    checkOrderVisible();
+    isFormCompleted();
   } else {
     e.target.style.borderColor = "red";
-    checkOrderVisible();
+    isFormCompleted();
   }
 }
 
 function userMailCheck(e) {
   if (isEmailValid(e.target.value)) {
     e.target.style.borderColor = "green";
-    checkOrderVisible();
+    isFormCompleted();
   } else {
     e.target.style.borderColor = "red";
-    checkOrderVisible();
+    isFormCompleted();
   }
 }
 function isEmailValid(value) {
