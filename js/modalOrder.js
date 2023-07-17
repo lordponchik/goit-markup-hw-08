@@ -44,7 +44,7 @@ export function renderOrder() {
             </label>
           </div>
 
-          <div class="modal-group modal-form__group" data-tooltip="Комментарий должен быть не меньше 10 символов">
+          <div class="modal-group modal-form__group" data-tooltip="Комментарий должен быть не меньше 5 символов">
             <label class="modal-group__field">
               <span class="modal-group__label">Комментарий</span>
               <textarea
