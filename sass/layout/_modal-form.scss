@@ -133,7 +133,7 @@
 
   &:after {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     bottom: 1%;
     left: 0;
@@ -149,7 +149,60 @@
 }
 
 .modal-form__btn {
+  position: relative;
+  @extend %align;
   @include btn-padding(10px, 55px);
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: space-between;
+  border-style: none;
+  border-radius: 4px;
+  min-width: 200px;
 
-  background-color: $modal-btn-send-color;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+
+  color: $secondary-text-color;
+  background-color: $secondary-bg-color;
+
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  transition: color $transition-duration $transition-timing-function,
+    background-color $transition-duration $transition-timing-function;
+}
+.modal-form__btn.modal-form__btn--resolved {
+  color: $white-color;
+  background-color: $accent-color;
+
+  &:hover,
+  &:focus {
+    color: $secondary-text-color;
+    background-color: $secondary-bg-color;
+  }
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+
+  position: absolute;
+  width: 400px;
+  height: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 2px;
+
+  background-color: $accent-color;
+  color: $secondary-bg-color;
+
+  opacity: 0;
+  transition: 1s;
+  pointer-events: none;
+}
+[data-tooltip]:hover::after,
+[data-tooltip]:focus-within::after {
+  opacity: 1;
 }

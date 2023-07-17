@@ -8,11 +8,11 @@ export function renderOrder() {
 
     <p class="modal__title">Оставьте свои данные, мы вам перезвоним</p>
         <form class="modal-form">
-          <div class="modal-group modal-form__group">
+          <div class="modal-group modal-form__group" data-tooltip="Имя должно быть размером от одного символа">
             <label class="modal-group__field">
               <span class="modal-group__label">Имя</span>
               <span class="modal-group__overlay">
-                <input type="text" class="modal-group__input" name="user-name" placeholder=" " />
+                <input type="text" class="modal-group__input"  data-user-name name="user-name" placeholder=" " />
                 <svg class="modal-group__icon">
                   <use href="./images/icon.svg#icon-person"></use>
                 </svg>
@@ -20,11 +20,11 @@ export function renderOrder() {
             </label>
           </div>
 
-          <div class="modal-group modal-form__group">
+          <div class="modal-group modal-form__group" data-tooltip="Формат номера телефона: +38(***)*******">
             <label class="modal-group__field">
               <span class="modal-group__label">Телефон</span>
               <span class="modal-group__overlay">
-                <input type="tel" class="modal-group__input" name="user-phone" placeholder=" " />
+                <input type="tel" class="modal-group__input" data-user-phone name="user-phone" placeholder=" " />
                 <svg class="modal-group__icon">
                   <use href="./images/icon.svg#icon-phone"></use>
                 </svg>
@@ -32,11 +32,11 @@ export function renderOrder() {
             </label>
           </div>
 
-          <div class="modal-group modal-form__group">
+          <div class="modal-group modal-form__group" data-tooltip="Формат номера телефона: XXXXXX@XX.XX">
             <label class="modal-group__field">
               <span class="modal-group__label">Почта</span>
               <span class="modal-group__overlay">
-                <input type="email" class="modal-group__input" name="user-email" placeholder=" " />
+                <input type="email" class="modal-group__input" data-user-email name="user-email" placeholder=" " />
                 <svg class="modal-group__icon">
                   <use href="./images/icon.svg#icon-email"></use>
                 </svg>
@@ -44,12 +44,13 @@ export function renderOrder() {
             </label>
           </div>
 
-          <div class="modal-group modal-form__group">
+          <div class="modal-group modal-form__group" data-tooltip="Комментарий должен быть не меньше 5 символов">
             <label class="modal-group__field">
               <span class="modal-group__label">Комментарий</span>
               <textarea
                 name="user-comment"
                 placeholder="Введите текст"
+                data-user-comment
                 class="modal-group__input modal-group__input--comment"
               ></textarea>
             </label>
@@ -57,7 +58,7 @@ export function renderOrder() {
 
           <div class="modal-group agreement modal-form__group">
             <label class="agreement__field">
-              <input type="checkbox" name="agreement" class="agreement__checkbox" />
+              <input type="checkbox" name="agreement" data-user-agreement class="agreement__checkbox" />
               <span class="agreement__check">
                 <svg class="agreement__icon">
                   <use href="./images/icon.svg#icon-chek-mark"></use>
@@ -72,6 +73,6 @@ export function renderOrder() {
             </label>
           </div>
 
-          <button type="submit" class="btn-page modal-form__btn">Отправить</button>
+          <button type="submit" class="modal-form__btn" data-order-button>Отправить</button>
         </form>`;
 }
