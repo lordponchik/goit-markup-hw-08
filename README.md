@@ -96,3 +96,25 @@
 
 **`«C5»`** Выполнено оформление мобильного меню.
 </details>
+# Made extra / Сделано дополнительно :clipboard:
+:us:
+<details>
+	<summary>English</summary>
+	<ul>
+		<li>Created render section "Portfolio" from JS.</li>
+		<li>A separate class has been made for the modal window.</li>
+    <li>The "Order a service" form is rendered from JS. There is data validation as you enter it.</li>
+		<li>A modal window has been created for the "Subscribe" button. There is a check for data entry in the input email.</li>
+	</ul>
+</details>
+:ukraine:
+<details>
+<summary>Russian</summary>
+ 	<ul>
+		<li>Создан рендер секции "Портфолио" из JS.</li>
+		<li>Для модального окна сделан отдельный класс.</li>
+    <li>Форма "Заказать услугу" рендерится из JS. Есть проверка данных при вводе.</li>
+		<li>Для кнопки "Подписаться" создано модальное окно. Есть проверка на ввод данных в input email.</li>
+	</ul>
+</details>
+
