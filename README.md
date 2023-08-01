@@ -97,7 +97,7 @@
 **`«C5»`** Выполнено оформление мобильного меню.
 </details>
 
-## Made extra / Сделано дополнительно :clipboard:
+## Made extra / Сделано дополнительно :man_technologist:
 :us:
 <details>
 	<summary>English</summary>
